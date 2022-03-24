@@ -32,30 +32,30 @@
 
   - Mạng cá nhân (Personal Area Network - PAN): Mạng sử dụng trong gia đình. Dễ dàng sử dụng các tài nguyên chung trong gia đình từ các vị trí khác nhau trong nhà.
 
-  <img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/1.png>
+  <img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/1.png">
   
 
   - Mạng cục bộ (Local Area Network - LAN): Sử dụng mạng trong 1 vùng địa lý có kích thước hạn chế. Ví dụ trong một trường học có nhiều phòng học.
 
- <img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/2.png>
+ <img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/2.png">
 
   - Mạng diện rộng (Wide Area Network - WAN): Có thể coi gồm nhiều mạng LAN khác nhau, nằm trong vùng địa lý có ban kính trên 100km. Ví dụ: thị xã, thành phố, tỉnh, quốc gia.
 
-<img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/3.png>
+<img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/3.png">
 
   - Mạng đô thị (Metropolitan Area Network - MAN): có kích thước hoạt động nằm ở giữa LAN và WAN. 1 công ty có nhiều chi nhánh thuộc 1 thành phố.
 MAN
-<img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/4.png>
+<img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/4.png">
 
   - Mạng toàn cầu (Global Area Network - GAN): Gồm nhiều mạng WAN. 1 công ty hoạt động xuyên quốc gia
 GAN
 
-<img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/5.png>
+<img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/5.png">
 
   - Mạng lưu trữ (Storage Area Network - SAN): là mạng không đặc trưng bởi quy mô, sử dụng để kết nối các máy chủ tới hệ thống lưu trữ dữ liệu.
 SAN
 
-<img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/6.png>
+<img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/6.png">
 
 - Phân loại mạng theo mô hình kết nối
 
