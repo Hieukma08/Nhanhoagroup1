@@ -38,6 +38,7 @@
 **Kiến trúc Gnutalla** : Gồm các nút ngang hàng nhau (peer ) , có thể đôi một kết nối với nhau 
 - Các nút này gọi là servent , vì vừa đóng vài trò client( khi yêu cầu nút khác ) lẫn server( khi đáp ứng nút khác ) . Các nút có bản ghi khác ghi thông tin chỉ mục về toàn bộ ( hoặc 1 phần ) hệ thống 
 - Muốn gia nhập mạng Gnutella , nút xác nhận địa chỉ một nút đã năm ftrong mạng Gnutella
+
 **Khuân dạng thông điệp giao thức của Gnutella** :
 - Ping : Phát hiện các nút trên mạng . Mỗi nút nhận được thông điệp Ping có thể trả lời bằng 1 hoặc nhiều thông điệp Pong
 - Pong : Thông điệp trả lời cho Ping , chỉ chưa địa chỉ và các thông tin của nút 
