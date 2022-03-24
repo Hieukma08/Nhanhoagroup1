@@ -45,6 +45,7 @@
 
   - Mạng đô thị (Metropolitan Area Network - MAN): có kích thước hoạt động nằm ở giữa LAN và WAN. 1 công ty có nhiều chi nhánh thuộc 1 thành phố.
 MAN
+
 <img src="/Mô hình mạng/Giới thiệu chung về truyền thông và công nghệ mạng/image base 2/4.png">
 
   - Mạng toàn cầu (Global Area Network - GAN): Gồm nhiều mạng WAN. 1 công ty hoạt động xuyên quốc gia
