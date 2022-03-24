@@ -8,6 +8,7 @@
 - Duy trì một bảng thông tin về mỗi gói dữ liệu được truyền qua 
 - Thông qua cơ chế mạng có thể lọc được các gói tin gửi đến hay gửi đi từ địa chỉ IP và cho phép ngăn chặn truy caaoj đến một port cụ thể 
 3. Ưu , nhược điểm của NAT 
+
 **Ưu điểm**
 - Tiết kiệm địa chỉ IPv4 : lượng người dùng truy cập internet ngày càng tăng cao , điều này dẫn đến nguy cơ thiếu hụt địa chỉ IPv4 . Kĩ thuật NAT sẽ giúp giảm thiểu đưcọ số lượng địa chỉ Ip cần sủ dụng .
 - Giúp che giấu IP bên trong mạng LAN 
