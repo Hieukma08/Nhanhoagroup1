@@ -12,6 +12,6 @@
 
 ## Subdomain
 - Subdomain là tên miền con của tên miền chính, phải chứa tiền tố tên miền chính. Được tạo ra cho 1 nhóm khách hàng riêng hoặc phục vụ một mục đích cụ thể.
-- Ví dụ: Tên miền chính : minhhoang.com
-    + abc.minhhoang.com
-    + report.minhhoang.com
+- Ví dụ: Tên miền chính : ngochieu.com
+    + abc.ngochieu.com
+    + report.ngochieu.com
