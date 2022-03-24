@@ -1,0 +1,8 @@
+B1 : Đăng kí tài khoản với email cá nhân 
+B2 : Tạo reponsitory
+B3 : Cấu hình : - Thiết lập email and name 
+		- Clone folder
+		- Thiết lập code theo hướng dẫn 
+B4 : Mở file clone trong visal studio code 
+B5 : Xác nhận thông tin tài khoản 
+B5 : Kết thúc _Tạo file , folder và update dữ liệu lên GITHUB
