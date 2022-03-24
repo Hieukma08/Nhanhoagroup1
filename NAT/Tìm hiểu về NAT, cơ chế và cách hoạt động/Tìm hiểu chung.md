@@ -14,6 +14,7 @@
 - Giúp che giấu IP bên trong mạng LAN 
 -  NAT có thể chia sẻ kết nối Internet cho nhiều máy tính và thiết bị di động khác nhau trong mạng LAN chỉ với 1 địa chỉ IP public duy nhất .
 - Giúp nhà quản trị lọc được các gói tin đến và xét duyệt được quyền truy cập của IP puclic đến từ 1 port bất kì 
+
 **Nhược Điểm**
 - Khi dùng NAT , CPU sẽ phải tốn thời gian để thay đổi địa chỉ IP . Điều này làm tăng độ trễ trong quá trình switch . làm ảnh hưởng đến tốc độ đường truyền , của mạng Internet 
 - NAT có khả năng che giấu địa chỉ IP trong mạng LAN nên kĩ thuật viên sẽ khó khăn khi kiểm rea nguồn gốc IP hoặc truy tìm dấu vết của gói tin .
