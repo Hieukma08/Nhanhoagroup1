@@ -7,3 +7,11 @@
 ## Thành phần của iSCSI
 - iSCSI Inititor : Là thiết bị client trong kiến trúc hệ thống lưu trữ qua mạng 
 - iSCSI Target : Thường là 1 máy chủ lưu trữ 
+
+## Cài đặt 
+
+- `yum -y install targetcli`
+- Để khởi động ta dùng lệnh # targetcli, sau đó `# ls` để được bố cục giao diện dạng cây
+
+<img src="/Hệ điều hành Linux/image/12.png">
+
