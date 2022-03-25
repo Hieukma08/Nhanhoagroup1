@@ -41,3 +41,14 @@
 - DHCP Release: Một DHCP Client gửi một gói DHCP Release đến một server để giải phóng địa chỉ IP và xoá bất cứ thuê bao nào đang tồn tại.
 
 <img src="/Tìm hiểu về các giao thức HTTP, DNS , FTP, SSh,DHCP,ARP,SNMP,SMTP/Giao thức DHCP/image/4.png">
+
+## Ưu , nhược điểm của gioa thức DHCP 
+### Ưu điểm 
+- DHCP cho phép cấu hình tự động nên có tác dụng giúp các thiết bị kết nối mạng nhanh chóng từ máy tính, laptop, điện thoại, máy tính bảng…
+- DHCP giúp quản lý địa chỉ IP một cách khoa học, tránh trường hợp trùng IP trên nhiều, đảm bảo cấu hình tự động cho mọi thiết bị kết nối mạng.
+- DHCP quản lý cả địa chỉ IP và các tham số TCP/IP trên cùng một màn hình nên có thể dễ dàng theo dõi các thông số và quản lý chúng qua các trạm.
+- Để nâng cấp cơ sở hạ tầng các nhà quản trị mạng có thể thay đổi cấu hình và thông số của IP.
+- Người quản lý khi đánh tự động nhờ máy chủ DHCP giúp cho việc quản lý khoa học hơn và tránh bị nhầm lẫn
+- Các thiết bị có thể di chuyển tự do giữa các mạng và nhận IP mới tự động.
+
+<img src="/Tìm hiểu về các giao thức HTTP, DNS , FTP, SSh,DHCP,ARP,SNMP,SMTP/Giao thức DHCP/image/5.png">
