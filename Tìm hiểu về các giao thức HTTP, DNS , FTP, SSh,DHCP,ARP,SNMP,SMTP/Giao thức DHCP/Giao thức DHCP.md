@@ -51,4 +51,4 @@
 - Người quản lý khi đánh tự động nhờ máy chủ DHCP giúp cho việc quản lý khoa học hơn và tránh bị nhầm lẫn
 - Các thiết bị có thể di chuyển tự do giữa các mạng và nhận IP mới tự động.
 
-<img src="/Tìm hiểu về các giao thức HTTP, DNS , FTP, SSh,DHCP,ARP,SNMP,SMTP/Giao thức DHCP/image/5.png">
+<img src="/Tìm hiểu về các giao thức HTTP, DNS , FTP, SSh,DHCP,ARP,SNMP,SMTP/Giao thức DHCP/image/6.png">
