@@ -11,7 +11,10 @@
 - Cả hai hệ thống quản lí đều cung cấp gói cung cấp 2 mức công cụ : 
   - công cụ cấp thấp , sẽ chăm sóc các chi tiết của giải nén gói cá nhân , chạy các kịch bản , nhận được các phần mềm được cài đặt một cách chính xác .
   - Một công cụ cấp cao hoạt động với các nhóm , tải gói từ nhà cung cấp và tìm ra các phụ thuộc .
-- Cài đặt một gói duy nhất có thể dẫn đến hàng chục thậm chí hàng trăm gói phụ thuộc được cài đặt .
+- Cài đặt một gói duy nhất có thể dẫn đến hàng chục thậm chí hàng trăm gói phụ thuộc được cài đặt . 
 
-|       Operation          |      RPM        |     DEbian      |
+
+
+|       Operation          |      RPM        |     DEbian         |
 |Cài đặt packet            | rpm -i foo.rpm  | dpkg --install foo.|
+|Cài đặt 1 packet từ repository |   yum install foo  | apt -get install foo | 
