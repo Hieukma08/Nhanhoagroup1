@@ -16,6 +16,7 @@
 
 
 |       Operation                                                    |      RPM                       |     DEbian                      |
+|:-----------------------------------------------------------------  | :----------------------------- | :------------------------------ |
 |Cài đặt packet                                                      | rpm -i foo.rpm                 | dpkg --install foo.             |
 |Cài đặt 1 packet từ repository                                      |   yum install foo              | apt -get install foo            | 
 | Xóa 1 packet                                                       |   rpm –e foo.rpm	dpkg          |      --remove foo.deb           |
@@ -28,3 +29,6 @@
 |Hiển thị các package có sẵn với "foo" trong tên                     |	yum list foo                  |	apt-cache search foo            |
 |Hiển thị tất cả các package có sẵn                                  |	yum list                      |	apt-cache dumpavail             |
 |Hiển thị package có chứa "file"	                                 | rpm –qf file                   |	 dpkg --search file             |
+
+
+
