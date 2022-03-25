@@ -18,3 +18,6 @@
 |       Operation          |      RPM        |     DEbian         |
 |Cài đặt packet            | rpm -i foo.rpm  | dpkg --install foo.|
 |Cài đặt 1 packet từ repository |   yum install foo  | apt -get install foo | 
+
+
+
