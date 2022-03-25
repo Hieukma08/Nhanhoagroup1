@@ -6,7 +6,7 @@
 <a name="1"></a>
 
 ## Cài đặt rsync 
-- Trên Red Hat? CenOS
+- Trên Red Hat/CenOS
   - `yum insstall rsync`
 - Trên Debian / Ubuntu 
   - .apt -get install rsync 
