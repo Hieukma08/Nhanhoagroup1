@@ -52,3 +52,7 @@
 - Các thiết bị có thể di chuyển tự do giữa các mạng và nhận IP mới tự động.
 
 <img src="/Tìm hiểu về các giao thức HTTP, DNS , FTP, SSh,DHCP,ARP,SNMP,SMTP/Giao thức DHCP/image/6.png">
+
+### Nhược điểm 
+- Với các thiết bị cố định và cần liên tục và cần truy cập liên tục như máy in , file server thì không phù hợp sử dụng IP động của DHCP vì khi kết nối với máy tính khác thì máy in sẽ phải thường xuyên cập nhật để cài đặt máy tính có thể kết nối với máy in 
+- DHCP thường chỉ sử dụng tại các hộ gia đình hoặc mô hình mạng nhỏ 
