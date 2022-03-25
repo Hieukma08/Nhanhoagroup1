@@ -106,3 +106,32 @@
 - Copy không cho ghi đè: thêm `-n`
 - Copy cho ghi đè không cần xác định `-f`
 - So sánh 2 tệp tin hoặc 2 thư mục `diff`
+
+# 3. Lệnh nén và giải nén 
+- Các option dùng với lệnh tar
+  - `-c` : Tạo file nén .tar
+  - `-x` : giải file nén .tar
+  - `-c` : Hiển thị quá trình giải nén và giải nén dữ liệu ra màn hình 
+  - `-f` : Chỉ định nén thành file 
+  - `-t` : Xem dữ liệu trong file nén 
+  - `-j` : Tạo file nén với bzip2 có định dạng file.tar.bz2
+  - `-r` : Thêm 1 file vào thư mục và file nén đã tồn tại
+  -  `--wildcards` : tìm và xuất file bất kì trong file nén 
+  ## 3.1 : Các lệnh nén 
+  - Nén file/thư mục sang định dạng "tar": # tar -cvf
+  - `# tar -cvf filenenA.tar /mnt/A` : Nén thư mục A thành filenenA.tar và show quá trình nén
+- Nén file/thư mục sang định dạng "tar.gz": # tar -cvzf
+  - `# tar -cvfz filenenA.tar.gz /mnt/A`: Nén thư mục A thành filenenA.tar.gz và show quá trình nén
+  ## 3.2 : Các lệnh giải nén 
+
+- `tar -xvf filenenA.tar /mnt/A`
+- `tar -xvfz filenenA.tar.gz /mnt/A`
+- `tar -xvfj filenenA.tar.bz2 /mnt/A`
+
+## 3.3 : Thêm file và folder vào file nén 
+- Thêm file `abc.txt` vào `file.tar`
+  - `tar -rvf filenenA.tar abc.txt`
+- Thêm thư mục` A `vào thư mục `filenenA.tar`
+  - `tar -rvf filenenA.tar A`
+4. File hệ thống 
+
