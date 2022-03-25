@@ -3,10 +3,10 @@
 - rsync : hiệu quả khi đệ quy sao chép một cây thư mục qua mạng , vì nó chỉ truyền đi sự thay đổi trong thư mục 
 - Người ta thuowfg đồng bộ hóa cây thư mục đích với gốc , sử dụng option `rsync -r` để đẹ quy xuống cây thư mục sao chép tất cả các tệp bên trong tệp được liệt kê dưới dạng nguồn 
 
+<a name="1"></a>
 
 ## Cài đặt rsync 
 - Trên Red Hat? CenOS
   - `yum insstall rsync`
 - Trên Debian / Ubuntu 
   - .apt -get install rsync 
-  
