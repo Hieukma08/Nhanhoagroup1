@@ -60,3 +60,14 @@
 - Lệnh `pstree` hiển thị các quy trình đang chạy trên hệ thống dưới dạng sơ đồ cây thể hiện mối quan hệ giữa một quy trình và quy trình mẹ của nó và bất kỳ quy trình nào khác mà nó tạo ra
 
 <img src="/Hệ điều hành Linux/image/17.png">
+
+## 5. Kill Process
+- Để dừng một Process nào đó ta dùng lệnh `kill [PID]` trong đó PID là giá trị oid của Process muốn dừng
+## 6. Process ID 
+- Process ID được đánh số theo thứ tự tăng dần. Bắt đầu từ 0 và tăng dần lên khi tới giá trị maximum. Giá trị maximum của Process ID có thể cấu hình được tùy vào từng hệ thống
+- Có thể thay đổi giá trị Process ID maximum bằng cách thay đổi `file /proc/sys/kernel/pid_max`
+## 7. Process Resource
+- Process Resource chính là bộ nhớ mà Process sử dụng, không gian địa chỉ của Process là riêng biệt, nhờ thiết kế này mà các Process là độc lập với nhau
+## 8. Forking 
+- Khi fork một process mới, bộ nhớ của process con và process cha vẫn là độc lập. Tức là nếu process con không thay đổi các giá trị trong process cha, process con và process cha sẽ vẫn dùng chung bộ nhớ. Điều này làm cho các process con chỉ đọc, sẽ có memory rất nhỏ. Hay nói cách khác, Linux cung cấp cho chúng ta một công cụ để chạy các multiprogram với một lượng resource vửa đủ.
+## 9. Delay Process 
