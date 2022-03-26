@@ -10,4 +10,3 @@
   - `yum insstall rsync`
 - Trên Debian / Ubuntu 
   - .apt -get install rsync 
-  
