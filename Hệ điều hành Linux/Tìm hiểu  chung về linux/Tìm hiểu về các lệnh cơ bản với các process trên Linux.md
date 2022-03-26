@@ -12,7 +12,6 @@
 
 - `top`
 
-<img src="/Hệ điều hành Linux/image/16">
+ <img src="/Hệ điều hành Linux/image/16.png">
 
  -Thông tin được hiên thị 
- 
