@@ -2,7 +2,7 @@
 
 ### 1. CPanel
 
-- cPanel là hệ thống quản trị web hosting trên nền tảng Linuxcung cấp giao diện đồ họa đơn giản, linh hoạt. Kèm theo rất nhiều tính năng giúp quản trị hosting và website một cách dễ dàng.
+- cPanel là hệ thống quản trị web hosting trên nền tảng Linux cung cấp giao diện đồ họa đơn giản, linh hoạt. Kèm theo rất nhiều tính năng giúp quản trị hosting và website một cách dễ dàng.
 
 ### 2. Web Hosting Manager (WHM)
 - Web Hosting Manager là hệ thống cho phép quản lý đơn giản tất cả những gì trên web server. Giao diện dễ dùng, cung cấp cho bạn những tiện ích để kiểm soát tất cả chức năng web server.
