@@ -32,12 +32,12 @@
 - CNAME record là gì?
     + Canonical Name - CNAME record được sử dụng thay cho A record khi tên miền hoặc miền con là Alias của một tên miền khác. Tất cả các CNAME record phải trỏ đến một tên miền, không bao giờ trỏ đến địa chỉ IP.
     + Ví dụ như :
-        + lmh.minhhoang.com có CNAME record là minhhoang.com, điều này có nghĩa là khi máy chủ truy cập các DNS record cho lmh.minhhoang.com, nó thực sự tạo 1 cái tra cứu khác tới minhhoang.com và trả về IP của minhhoang.com thông qua A record của nó.
-        + Có thể gọi minhhoang.com là tên thật của lmh.minhhoang.com.
+        + thanhieu.ngochieu.com có CNAME record là ngochieu.com, điều này có nghĩa là khi máy chủ truy cập các DNS record cho thanhieu.ngochieu.com, nó thực sự tạo 1 cái tra cứu khác tới minhhoang.com và trả về IP của ngochieu.com thông qua A record của nó.
+        + Có thể gọi ngochieu.com là tên thật của thanhieu.ngochieu.com.
         + Thông thường, khi các trang web có tên miền phụ, các miền phụ đó sẽ có CNAME trỏ tới tên miền gốc. Bằng cách này nếu địa chỉ IP của máy chủ thay đổi, chỉ cần cập nhật cái A record cho tên miền gốc là được.
 - Một quan niệm sai lầm về CNAME record.
     + ĐÓ là CNAME record luôn phân giải đến cùng một trang web mà tên miền đó trỏ tới.
-    + CNAME record chỉ trỏ máy khách đến cùng địa chỉ IP với miền gốc. Khi máy khách truy cập địa chỉ IP đó, máy chủ web vẫn sẽ xử lí url tương ứng. Vậy nên khi truy cập lmh.minhhoang.com, máy chỉ sẽ xem url và nhận thấy nó là của lmh.minhhoang.com và sẽ phân phối trang lmh chứ không phải là trang chủ.
+    + CNAME record chỉ trỏ máy khách đến cùng địa chỉ IP với miền gốc. Khi máy khách truy cập địa chỉ IP đó, máy chủ web vẫn sẽ xử lí url tương ứng. Vậy nên khi truy cập thanhieu.ngochieu.com, máy chỉ sẽ xem url và nhận thấy nó là của thanhieu.ngochieu.com và sẽ phân phối trang lmh chứ không phải là trang chủ.
 - Ví dụ về CNAME record: 
 
     <img src="image/3.PNG">
