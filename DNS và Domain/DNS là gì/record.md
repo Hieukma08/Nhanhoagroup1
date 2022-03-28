@@ -37,7 +37,7 @@
         + Thông thường, khi các trang web có tên miền phụ, các miền phụ đó sẽ có CNAME trỏ tới tên miền gốc. Bằng cách này nếu địa chỉ IP của máy chủ thay đổi, chỉ cần cập nhật cái A record cho tên miền gốc là được.
 - Một quan niệm sai lầm về CNAME record.
     + ĐÓ là CNAME record luôn phân giải đến cùng một trang web mà tên miền đó trỏ tới.
-    + CNAME record chỉ trỏ máy khách đến cùng địa chỉ IP với miền gốc. Khi máy khách truy cập địa chỉ IP đó, máy chủ web vẫn sẽ xử lí url tương ứng. Vậy nên khi truy cập thanhieu.ngochieu.com, máy chỉ sẽ xem url và nhận thấy nó là của thanhieu.ngochieu.com và sẽ phân phối trang lmh chứ không phải là trang chủ.
+    + CNAME record chỉ trỏ máy khách đến cùng địa chỉ IP với miền gốc. Khi máy khách truy cập địa chỉ IP đó, máy chủ web vẫn sẽ xử lí url tương ứng. Vậy nên khi truy cập thanhieu.ngochieu.com, máy chỉ sẽ xem url và nhận thấy nó là của thanhieu.ngochieu.com và sẽ phân phối trang thanhieu chứ không phải là trang chủ.
 - Ví dụ về CNAME record: 
 
     <img src="image/3.PNG">
