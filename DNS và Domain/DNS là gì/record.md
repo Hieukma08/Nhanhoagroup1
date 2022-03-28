@@ -32,7 +32,7 @@
 - CNAME record là gì?
     + Canonical Name - CNAME record được sử dụng thay cho A record khi tên miền hoặc miền con là Alias của một tên miền khác. Tất cả các CNAME record phải trỏ đến một tên miền, không bao giờ trỏ đến địa chỉ IP.
     + Ví dụ như :
-        + thanhieu.ngochieu.com có CNAME record là ngochieu.com, điều này có nghĩa là khi máy chủ truy cập các DNS record cho thanhieu.ngochieu.com, nó thực sự tạo 1 cái tra cứu khác tới minhhoang.com và trả về IP của ngochieu.com thông qua A record của nó.
+        + thanhieu.ngochieu.com có CNAME record là ngochieu.com, điều này có nghĩa là khi máy chủ truy cập các DNS record cho thanhieu.ngochieu.com, nó thực sự tạo 1 cái tra cứu khác tới ngochieu.com và trả về IP của ngochieu.com thông qua A record của nó.
         + Có thể gọi ngochieu.com là tên thật của thanhieu.ngochieu.com.
         + Thông thường, khi các trang web có tên miền phụ, các miền phụ đó sẽ có CNAME trỏ tới tên miền gốc. Bằng cách này nếu địa chỉ IP của máy chủ thay đổi, chỉ cần cập nhật cái A record cho tên miền gốc là được.
 - Một quan niệm sai lầm về CNAME record.
