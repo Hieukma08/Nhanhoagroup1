@@ -54,7 +54,7 @@
     - `Xin chao, ban ten la gi?`
     - `Manh`
     - `Xin chao, Manh.`
-    
+
   5. Tầm quan trọng của các dấu nháy với String 
     - Việc sử dụng dấu nháy rất quan trọng trong việc thể hiện string trong bash 
     - Có hai dạng dấu nháy :  
@@ -183,5 +183,65 @@
 
 ## **Nhóm command SSh , thông tin hệ thống và mạng**
 
+- Khóa học Bash Shell cũng cung cấp cho bạn kiến thức về các command đã kết nối , truyền tải dữ liệu với remote server , các command liên quan đến thông tin hệ điều hành và internet
 
+- `bg` : Hiển thị danh sách background job ( công việc chạy trong nền)
+- `cal` : Hiển thị lịch của tháng hiện tại 
+- `date` : hiển thị nghày và giờ của thời điểm hiện tại 
+- `df` : Hiển thị mức dùng ổ đĩa : đã dùng bao nhiêu , còn trông sbao nhiêu 
+- `dif` : Kiểm tra thông tin bản ghi DNS của 1 tên miền 
+- `dig` : Kiểm tra thông tin bản ghi DNS của 1 tên miền 
+- `du` : Hiển thị mức sử dụng ổ đĩa của các tệp tin or thư mục 
+  - `-h` : Hiển thị ở mức đơn vị (KB), (MB) ,(GB)
+  - `-s` : Hiển thị mức dùng ổ đĩa của thư mục một cách tóm tắt 
+- `finger` : Display information about user : Hiển thị thông tin về 1 user
+- `fg` : Di chuyển các job lên foreround ( Chuyển từ chạy trong nền ra chạy trên màn hình )
+- `jobs` : Liệt kê các job đang chạy trong background , cung cấp cho bạn chỉ số job ( job number )
+- `last` : Liệt kê thông tin đăng nhập cuối cùng về người dùng chỉ định 
+- `man` : Hiển thị tài liệu hướng dẫn của command cụ thể 
+- `passwd` : Cho phép user đang đăng nhập thay đổi mật khẩu đăng nhập 
+- `ping` : Ping tới 1 host nào đó kèm theo kết quả . Được dùng để kiểm tra xem máy của bạn có kết nối tới host đó hay không .
+- `ps` : Hiển thị các tiến trình  hiện có của bạn 
+- `quota` : Cho biết mức dùng ổ đĩa của bạn là bao nhiêu
+- `scp` : Truyền dữ liệu từ máy localhost tới máy remote hoặc ngược lại 
+- `ssh` : là một chương trình cho phéo bạn đăng nhập và thwucj thi các command trên 1 máy remote từ bên máy tính của bạn 
+  - Bạn có thể sử dụng `-p` để truyền cổng kết nối SSH , mặc định là cổng 22
+- `top` : hiển thị các tiến trình đnag được kích hoạt 
+- `username`: Hiển thị thông tin nhân hệ điều hành 
+-  `uptime` : Hiển thị thời gian hoạt động 
+- `w` : Display who is online: Hiển thị user nào đang online 
+- `wget` : Dowlaod tập tin từ Internet 
+- `whoami` : trả về username của user đang đăng nhập 
+- `whois` : Xem thông tin của 1 tên miền 
+
+# **Nhóm các command thác tác tiến trình**
+
+- việc quản lí các tiến trình cũng là 1 phần kiến thức quan trọng có trong khóa học Bash Shell này .
+
+- `Kill` : Bắt buocj dừng ( kết thúc ) 1 tiến trình có PID mà bạn cung cấp 
+- `killall` : bắt buộc dừng ( kết thúc tất cả ) tất cả các tiến trình 
+- `&` : Kí tự `&` : chỉ định ` command  phải chạy ở chế độ backgroud 
+- `nohup` : Nó cho phép bạn chạy các command haowcj tiến trình trong backgroud ngay cả khi bạn đăng xuất khỏi terminal 
+  - kết hợp với `&` để tạo ra các job chạy trong background mà vẫn chạy khi chúng đã đăng xuất 
+- dòng đầu tiên mà các bạn sẽ viết trong các file bash script được gọi là `shebang` . Dòng này trong các file script cho phép các file được thực thi 1 cách độc lập  mà không cần phải gõ `sh` , `bash`, `python` hay `ppp` ....
+  - > #!/usr/bin/evn bash
+
+
+## Biến trong Bash Shell 
+- Tạo các biến trong Bash Shell cũng tương tự nhue trong các ngôn ngữ lập trình . Nó không có kiểu dữ liệu . Biến trong bash có thể chứa số , kí tự , chuỗi kí tự , ... . bạn cũng không cần phải khai báo biến , chỉ cần gán giá trị cho biến và tham chiếu nó sẽ được tạo ra 
+
+> `str="hello world "`
+
+- Dòng lệnh trong 1 biến trên str và gán giá trị `hello world` cho nó . Để lấy giá trị của biến , bạn chỉ cần thêm `$` vào trước biến 
+  - vd : ` echo $str #hello world`
+
+**Mảng trong bash shell**
+
+- Tương tự giữa các ngôn ngữ lập trình , bash cũng có mảng . Một mảng là một tập hợp chứa nhiều giá trị . Không có kích thước giới hạn cho mảng . Magr trong bash chỉ có chỉ số bắt đầu từ 0 . có một vài cách khác nhau để tạo ra biến trong mảng bash:
+
+>array[0]=val
+>array[1]=val
+>array[2]=val
+>array=([2]=val [0]=val [1]=val)
+>array=(val val val)
 
