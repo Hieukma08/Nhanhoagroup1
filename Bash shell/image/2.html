@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager -->
+<script async="" src="./2_files/gtm.js.download"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NMFHN4S');</script>
+<!-- End Google Tag Manager -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./2_files/font-awesome.min.css">
+	<link rel="stylesheet" href="./2_files/screen.css">
+	<link rel="stylesheet" href="./2_files/bootstrap.min.css">
+	<script src="./2_files/jquery.min.js.download"></script>
+	<script src="./2_files/popper.min.js.download"></script>
+	<script src="./2_files/bootstrap.min.js.download"></script>
+	<link rel="apple-touch-icon" href="https://blog.cloud365.vn/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="https://blog.cloud365.vn/touch-icon.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="https://blog.cloud365.vn/images/favicon.png">
+	<link rel="stylesheet" href="./2_files/css">
+
+	<script>
+		function remove_accents(str) {
+			new_str = str.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+			return new_str
+		}
+	</script>
+	
+
+	<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Bash Shell dành cho người mới bắt đầu - Chương 1 | BlogCloud365</title>
+<meta name="generator" content="Jekyll v3.7.4">
+<meta property="og:title" content="Bash Shell dành cho người mới bắt đầu - Chương 1">
+<meta name="author" content="manhdv">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Bash Shell dành cho người mới bắt đầu">
+<meta property="og:description" content="Bash Shell dành cho người mới bắt đầu">
+<link rel="canonical" href="http://localhost:8081/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/">
+<meta property="og:url" content="http://localhost:8081/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/">
+<meta property="og:site_name" content="BlogCloud365">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-02-22T00:00:00+00:00">
+<script type="application/ld+json">
+{"url":"http://localhost:8081/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:8081/siteicon.png"},"name":"manhdv"},"author":{"@type":"Person","name":"manhdv"},"headline":"Bash Shell dành cho người mới bắt đầu - Chương 1","dateModified":"2019-02-22T00:00:00+00:00","datePublished":"2019-02-22T00:00:00+00:00","description":"Bash Shell dành cho người mới bắt đầu","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+	<link type="application/atom+xml" rel="alternate" href="http://localhost:8081/feed.xml" title="BlogCloud365">
+
+	<script type="text/javascript" src="./2_files/jquery.min.js(1).download"></script>
+</head>
+
+<body class="">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMFHN4S"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<header>
+		<div class="wrapper">
+			<section class="top-bar">
+				<div class="logo"><a href="https://blog.cloud365.vn/"><img src="./2_files/logo-white.png">
+</a></div>
+				<a class="nav-toggle" id="open-nav" href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#">☰</a>
+<nav>
+	
+	
+
+		
+		<a href="https://news.cloud365.vn/" class="">News</a>
+	
+	
+
+		
+		<a href="https://blog.cloud365.vn/" class="">Blog</a>
+	
+	
+
+		
+		<a href="https://blog.cloud365.vn/archives/" class="">Archives</a>
+	
+	
+
+		
+		<a href="https://blog.cloud365.vn/tags/" class="">Tags</a>
+	
+	
+
+		
+		<a href="https://blog.cloud365.vn/faq/" class="">FAQ</a>
+	
+	
+
+		
+		<a href="https://cloud365.vn/" class="">Home</a>
+	
+	
+
+		
+		<a href="https://support.cloud365.vn/" class="">Support</a>
+	
+	
+
+		
+		<a href="https://portal.cloud365.vn/" class="">Portal</a>
+	
+	<a><i class="fa fa-search" data-toggle="modal" data-target="#nav-search-modal"></i></a>
+</nav>
+
+			</section>
+			<section class="hero_search">
+				<h1>BLOG CHO DỊCH VỤ CLOUD365</h1>
+				<p>Nơi chứa các tài liệu tham khảo của dịch vụ Cloud365.</p>
+				<form action="https://blog.cloud365.vn/search/" method="get">
+	<input type="search" name="q" placeholder="Nhập từ khóa bạn muốn tìm kiếm?" autofocus="">
+	<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+    <path d="M0 0h24v24H0z" fill="none"></path>
+</svg>
+	<input type="submit" value="Search" style="display: none;">
+</form>
+			</section>
+		</div>
+	</header>
+	<div class="nh-main-content">
+		<section class="content">
+			<div class="wrapper">
+				<section class="tutorial">
+	<section class="sidebar sticky" style="position: fixed; top: 85px;">
+		<ul>
+			
+			
+				<li><a class="left-menu" href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#loi-noi-%C4%91au">Lời nói đầu</a></li>
+			
+				<li><a class="left-menu" href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#1-bash-shell--hello-world">1. Bash Shell:  Hello World</a></li>
+			
+				<li><a class="left-menu active" href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#2-su-dung-cac-bien-trong-linux">2. Sử dụng các biến trong Linux</a></li>
+			
+				<li><a class="left-menu" href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#3-truyen-tham-so-vao-bien-voi-user-input">3. Truyên tham số vào biến với User Input</a></li>
+			
+				<li><a class="left-menu" href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#4-tam-quan-trong-cua-cac-dau-nhay-quoting-voi-string">4. Tầm quan trọng của các dấu nháy (quoting) với String</a></li>
+			
+				<li><a class="left-menu" href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#5-che-%C4%91o-debug-trong-shell">5. Chế độ Debug trong Shell</a></li>
+			
+		</ul>
+	</section>
+	<section class="tutorial-content">
+		<h1>Bash Shell dành cho người mới bắt đầu - Chương 1</h1>
+
+		
+		
+		<div class="tutorial-main">
+			<h2 id="loi-noi-đau">Lời nói đầu<a href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#loi-noi-%C4%91au" class="header-link">#</a></h2>
+
+<p>Đối với bất kỳ những ai đã và đang làm việc với hệ thống Linux thì chắc chắn đều thấy sự hiệu quả của nhứng script Bash Shell. Việc sử dụng script Bash shell giúp các công việc lặp đi lặp lại trên Linux được thực hiện hiệu quả, ít sai sót. Tuy nhiên để viết các script Bash shell ngắn, gọn và có thể tận dụng được trên nhiều môi trường thì chúng ta cần có những kiến thức và lượng thực hành nhất định.</p>
+
+<p>Chuỗi bài viết về Bash Shell sau được biên dịch lại từ cuốn <strong>Bash Notes for Professionals</strong> thuộc bản quyền của trang https://goalkicker.com, đi kèm với những thực hành của mình trong quá trình học về Shell. Hi vọng chuỗi bài đây sẽ giúp các bạn có những kiến thức nền tảng vững chắc về ngôn ngữ script thú vị này.</p>
+
+<h2 id="1-bash-shell--hello-world">1. Bash Shell:  Hello World<a href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#1-bash-shell--hello-world" class="header-link">#</a></h2>
+
+<h3 id="chế-độ-shell-tương-tác-interactive-shell">Chế độ Shell tương tác (Interactive Shell)</h3>
+
+<p>Chúng ta có thể hiểu đơn giản Shell interactive là dạng sử dụng câu lệnh trực tiếp trên môi trường Unix như ví dụ dưới.</p>
+
+<p>Ví dụ, sử dụng Bash để in ra output là <strong>Hello World</strong> như sau :</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"Hello World"</span>
+<span class="c">#&gt; Hello World </span>
+</code></pre></div></div>
+
+<h3 id="chế-độ-shell-không-tương-tác-non-interactive-shell">Chế độ Shell không tương tác (Non-Interactive Shell)</h3>
+
+<p>Thay vì thực hiện từng câu lệnh Bash một. Chúng ta có thể tổ hợp chúng vào một file script và có thể sử dụng lại nhiều lần.</p>
+
+<p>Ví dụ, tạo một script <strong>Hello World</strong></p>
+
+<ul>
+  <li>Tạo một file với tên là <code class="highlighter-rouge">hello-world.sh</code></li>
+</ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch hello-world.sh
+</code></pre></div></div>
+
+<ul>
+  <li>Phân quyền thực thi được với câu lệnh</li>
+</ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod +x hello-world.sh
+</code></pre></div></div>
+
+<ul>
+  <li>Thêm nội dung sau vào script
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="nb">echo</span> <span class="s2">"Hello World"</span>
+</code></pre></div>    </div>
+    <ul>
+      <li>Dòng 1 : Dòng đầu tiên của script phải bắt đầu với ký tự <code class="highlighter-rouge">#!</code>, theo đúng cấu trúc shebang1. Cấu trúc shebang sẽ chỉ cho OS chạy chương trình <code class="highlighter-rouge">/bin/bash</code> để thực hiện các nội dung của script. VD : <code class="highlighter-rouge">/bin/bash hello-world</code></li>
+      <li>Dòng 2 : Sử dụng câu lệnh <code class="highlighter-rouge">echo</code> để ghi dòng <code class="highlighter-rouge">Hello World</code> ra output.</li>
+    </ul>
+  </li>
+  <li>Thực hiện chạy sript <code class="highlighter-rouge">hello-world.sh</code> theo 1 trong 3 cách sau :
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./hello-world.sh 
+/bin/bash hello-world.sh
+bash hello-world.sh 
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="2-su-dung-cac-bien-trong-linux">2. Sử dụng các biến trong Linux<a href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#2-su-dung-cac-bien-trong-linux" class="header-link">#</a></h2>
+
+<p>Tạo một file mới tên gọi <code class="highlighter-rouge">hello.sh</code> với nội dung bên dưới và cấp quyền thực thi <code class="highlighter-rouge">chmod +x hello.sh</code></p>
+
+<p>Thực hiện chạy sript với cú pháp <code class="highlighter-rouge">./hello.sh</code>. Output mong đợi sẽ là :</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, World
+</code></pre></div></div>
+
+<p>Nội dung  script như sau :</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="nv">who_variable</span><span class="o">=</span><span class="s2">"World"</span>
+<span class="nb">printf</span> <span class="s2">"Hello, %s</span><span class="se">\n</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$who_variable</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>Phân tích từng dòng của script sẽ như sau :</p>
+
+<ul>
+  <li>Dòng 1 : <code class="highlighter-rouge"><span class="c">#!/usr/bin/env bash</span></code> : Cú pháp shebang chỉ ra chương trình cần thực thi với Bash shell</li>
+  <li>Dòng 2 : Gán biến <code class="highlighter-rouge">who_variable</code> có nội dung là <code class="highlighter-rouge">World</code>.</li>
+  <li>Dòng 3 :
+    <ul>
+      <li><code class="highlighter-rouge">printf</code> : câu lệnh in</li>
+      <li><code class="highlighter-rouge">%s</code> : format chỉ ra rằng biến phía sau phải là dạng string</li>
+      <li><code class="highlighter-rouge">\n</code> : khi có thêm ký tự thì sẽ xuống dòng mới</li>
+      <li><code class="highlighter-rouge">$who_variable</code> : biến được khai báo ở dòng trên</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Chú ý</strong> : Các biến cần được đặt bên trong dấu <code class="highlighter-rouge">""</code>. Để biết thêm tầm quan trọng của việc này, tham khảo (link sau)[https://unix.stackexchange.com/questions/171346/security-implications-of-forgetting-to-quote-a-variable-in-bash-posix-shells]</p>
+
+<p>Ngoài cách gọi trực tiếp biến bằng tên, chúng ta có thể sử dụng biến thay thế là <code class="highlighter-rouge">$1</code>. Biến này đại diện cho đối số ở dòng đầu tiên và biến <code class="highlighter-rouge">$1</code> vẫn phải là dạng string.</p>
+
+<h2 id="3-truyen-tham-so-vao-bien-voi-user-input">3. Truyên tham số vào biến với User Input<a href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#3-truyen-tham-so-vao-bien-voi-user-input" class="header-link">#</a></h2>
+
+<p>Các biến còn có thể được truyền vào trực tiếp từ người dùng như sau :</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="nb">echo</span> <span class="s2">"Xin chao, ban ten la gi?"</span>
+<span class="nb">read </span>name
+<span class="nb">echo</span> <span class="s2">"Xin chao, </span><span class="nv">$name</span><span class="s2">."</span>
+</code></pre></div></div>
+
+<p>Khi script chạy tới dòng thứ 2, câu lệnh <code class="highlighter-rouge">read</code> sẽ đọc dữ liệu truyền vào từ người dùng, sau đó gán dữ liệu đó vào biến <code class="highlighter-rouge">name</code>.</p>
+
+<p>Kết quả như sau :</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Xin chao, ban ten la gi?
+Manh
+Xin chao, Manh.
+</code></pre></div></div>
+
+<h2 id="4-tam-quan-trong-cua-cac-dau-nhay-quoting-voi-string">4. Tầm quan trọng của các dấu nháy (quoting) với String<a href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#4-tam-quan-trong-cua-cac-dau-nhay-quoting-voi-string" class="header-link">#</a></h2>
+
+<p>Việc sử dụng dấu nháy rất quan trọng trong việc thể hiện string trong bash.</p>
+
+<p>Có 2 dạng dấu nháy :</p>
+
+<ul>
+  <li>Weak quoting : dấu nháy kép “</li>
+  <li>Strong quoting : dấu nháu đơn ‘</li>
+</ul>
+
+<h3 id="th1--weak-quoting-nháy-kép">TH1 : Weak quoting (nháy kép)</h3>
+
+<p>Sử dụng nháy kép khi bạn muốn bash thực thi các biến String được truyền vào. Ví dụ, với script như sau :</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="nv">world</span><span class="o">=</span><span class="s2">"World"</span>
+<span class="nb">echo</span> <span class="s2">"Hello </span><span class="nv">$world</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>Output hiện ra sẽ là : <code class="highlighter-rouge">Hello World</code></p>
+
+<h3 id="th2--strong-quoting-nháy-đơn">TH2 : Strong quoting (nháy đơn)</h3>
+
+<p>Sử dụng nháy đơn khi bạn muốn giữ nguyên nội dung trong dấu nháy. Ví dụ :</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="nv">world</span><span class="o">=</span><span class="s2">"World"</span>
+<span class="nb">echo</span> <span class="s1">'Hello $world'</span>
+</code></pre></div></div>
+
+<p>Output hiện ra sẽ là : <code class="highlighter-rouge">Hello $world</code></p>
+
+<p>Hoặc bạn có thể sử dụng dâu <code class="highlighter-rouge">\</code> để thể hiện đây là một String thông thường.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="nv">world</span><span class="o">=</span><span class="s2">"World"</span>
+<span class="nb">echo</span> <span class="s2">"Hello </span><span class="se">\$</span><span class="s2">world"</span>
+</code></pre></div></div>
+
+<h2 id="5-che-đo-debug-trong-shell">5. Chế độ <strong>Debug</strong> trong Shell<a href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#5-che-%C4%91o-debug-trong-shell" class="header-link">#</a></h2>
+
+<p>Để có thể theo dõi quá trình thực thi script nhằm hiểu rõ hơn về cách script thực hiện, hoặc tìm lỗi trong script, chúng ta có thể dùng chế độ <strong>Debug</strong>.</p>
+
+<p>Để thực hiện việc debug, cần thêm tổ hợp ký tự <code class="highlighter-rouge">-x</code> đằng sau các mệnh lệnh run.</p>
+
+<h3 id="ví-dụ-1">Ví dụ 1</h3>
+
+<p>Bật mode debug với script <code class="highlighter-rouge">hello-world.sh</code> ở phần 1.3 nhằm theo dõi quá trình thực thi script</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash <span class="nt">-x</span> hello-world.sh
+
++ <span class="nb">echo</span> <span class="s1">'Xin chao, ban ten la gi?'</span>
+Xin chao, ban ten la gi?
++ <span class="nb">read </span>name
+Manh
++ <span class="nb">echo</span> <span class="s1">'Xin chao, Manh.'</span>
+Xin chao, Manh.
+</code></pre></div></div>
+
+<h3 id="ví-dụ-2">Ví dụ 2</h3>
+
+<p>Bật mode debug để tìm lỗi có trong script <code class="highlighter-rouge">hello.sh</code> sau :</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="nb">echo</span> <span class="s2">"Hello World</span><span class="se">\n</span><span class="s2">"</span>
+<span class="nv">adding_string_to_number</span><span class="o">=</span><span class="s2">"s"</span>
+<span class="nv">v</span><span class="o">=</span><span class="k">$(</span>expr 5 + <span class="nv">$adding_string_to_number</span><span class="k">)</span>
+</code></pre></div></div>
+
+<p>Output hiển thị sẽ là :</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello World<span class="se">\n</span>
+expr: non-integer argument
+</code></pre></div></div>
+
+<p>Tuy nhiên, nội dung output như vậy là chưa đủ để chúng ta tìm ra lỗi của script. Hãy thử bật mode debug để tìm lỗi :</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash <span class="nt">-x</span> hello.sh
+
++ <span class="nb">echo</span> <span class="s1">'Hello World\n'</span>
+Hello World<span class="se">\n</span>
++ <span class="nv">adding_string_to_number</span><span class="o">=</span>s
+++ expr 5 + s
+expr: non-integer argument
++ <span class="nv">v</span><span class="o">=</span>
+</code></pre></div></div>
+
+<p>Có thể thấy do <code class="highlighter-rouge">s</code> không phải là một chữ số vậy nên toán tử không thể thực hiện được.</p>
+
+<p>Trên đây là nội dung của Chương 1, hẹn gặp các bạn tại Chương 1 phần 2 vào cuối tuần sau. Xin cảm ơn !</p>
+
+
+		</div>
+		<!-- Look the author details up from the site config. -->
+
+
+<!-- Output author details if some exist. -->
+
+
+		<div class="tutorial-share">
+			<a class="modalOpen no-smooth" href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#subscribe">
+			<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+		
+ Subscribe</a>
+			<a class="modalOpen no-smooth" href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/#share">
+			<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z" fill="none"></path>
+				<path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path>
+			</svg>
+		
+ Share</a>
+		</div>
+	</section>
+</section>
+
+
+
+
+
+	<div class="related">
+		<h3>Related tutorials</h3>
+
+		<ul class="listing">
+			
+		<li>
+			<a href="https://blog.cloud365.vn/linux/cve2019-11477/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"></path>
+			<path d="M0 0h24v24H0z" fill="none"></path>
+		</svg>
+</div>
+				<article>
+					<div>
+						<h3>Hướng dẫn khắc phục lỗ hổng bảo mật CVE-2019-11477 trên Cloud365</h3>
+						<p class="description">Hướng dẫn khắc phục lỗ hổng bảo mật CVE-2019-11477 trên Cloud365</p>
+					</div>
+				</article>
+			</a>
+		</li>
+			
+		<li>
+			<a href="https://blog.cloud365.vn/cve-2019-12735/CVE_2019-12735/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"></path>
+			<path d="M0 0h24v24H0z" fill="none"></path>
+		</svg>
+</div>
+				<article>
+					<div>
+						<h3>CVE-2019-12735</h3>
+						<p class="description">Vim &lt; 8.1.1365 / Neovim &lt; 0.3.6 - Arbitrary Code Execution</p>
+					</div>
+				</article>
+			</a>
+		</li>
+			
+		<li>
+			<a href="https://blog.cloud365.vn/cve_2019-10149/CVE_2019-10149/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"></path>
+			<path d="M0 0h24v24H0z" fill="none"></path>
+		</svg>
+</div>
+				<article>
+					<div>
+						<h3>CVE_2019-10149</h3>
+						<p class="description">CVE-2019-10149 Critical Remote Command Execution In Exim</p>
+					</div>
+				</article>
+			</a>
+		</li>
+			
+		<li>
+			<a href="https://blog.cloud365.vn/linux/huong-dan-setup-pritunl/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"></path>
+			<path d="M0 0h24v24H0z" fill="none"></path>
+		</svg>
+</div>
+				<article>
+					<div>
+						<h3>Hướng dẫn cài đặt Pritunl VPN trên Cloud365</h3>
+						<p class="description">Hướng dẫn cài đặt Pritunl VPN trên Cloud365</p>
+					</div>
+				</article>
+			</a>
+		</li>
+			
+		<li>
+			<a href="https://blog.cloud365.vn/windows/cap-nhat-lo-hong-bao-mat-cve-2019-0708/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"></path>
+			<path d="M0 0h24v24H0z" fill="none"></path>
+		</svg>
+</div>
+				<article>
+					<div>
+						<h3>Hướng dẫn cập nhật bản vá lỗ hổng bảo mật CVE-2019-0708 trên Windows.</h3>
+						<p class="description">Tài liệu hướng dẫn cập nhật bản vá lỗ hổng bảo mật CVE-2019-0708 trên hệ điều hành Windows</p>
+					</div>
+				</article>
+			</a>
+		</li>
+			
+		<li>
+			<a href="https://blog.cloud365.vn/monitor/lay-gia-tri-used-ram-phan-tram/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"></path>
+			<path d="M0 0h24v24H0z" fill="none"></path>
+		</svg>
+</div>
+				<article>
+					<div>
+						<h3>Zabbix 4.0 - Hiển thị dung lượng RAM đã sử dụng dạng phần trăm</h3>
+						<p class="description">Tài liệu hướng dẫn hiển thị giá trị RAM used dạng phần trăm trên server Linux.</p>
+					</div>
+				</article>
+			</a>
+		</li>
+			
+		<li>
+			<a href="https://blog.cloud365.vn/other/Tich-hop-sentry-voi-gitlab/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"></path>
+			<path d="M0 0h24v24H0z" fill="none"></path>
+		</svg>
+</div>
+				<article>
+					<div>
+						<h3>Tích hợp Sentry với Gitlab</h3>
+						<p class="description">Tích hợp Sentry với Gitlab</p>
+					</div>
+				</article>
+			</a>
+		</li>
+			
+		<li>
+			<a href="https://blog.cloud365.vn/monitor/check_mk-part-4-dat-nguong-dich-vu/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"></path>
+			<path d="M0 0h24v24H0z" fill="none"></path>
+		</svg>
+</div>
+				<article>
+					<div>
+						<h3>CHECKMK part 4 - Đặt ngưỡng cảnh báo cho dịch vụ.</h3>
+						<p class="description">Tìm hiểu về omd-checkmk.</p>
+					</div>
+				</article>
+			</a>
+		</li>
+			
+		<li>
+			<a href="https://blog.cloud365.vn/monitor/turning-zabbix/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"></path>
+			<path d="M0 0h24v24H0z" fill="none"></path>
+		</svg>
+</div>
+				<article>
+					<div>
+						<h3>Hướng dẫn turning zabbix</h3>
+						<p class="description">Hướng dẫn turning zabbix</p>
+					</div>
+				</article>
+			</a>
+		</li>
+			
+		<li>
+			<a href="https://blog.cloud365.vn/monitor/monitor-multi-disk-zabbix/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"></path>
+			<path d="M0 0h24v24H0z" fill="none"></path>
+		</svg>
+</div>
+				<article>
+					<div>
+						<h3>Hướng dẫn monitor nhiều disk trên zabbix</h3>
+						<p class="description">Hướng dẫn discovery disk và sử dụng plugin để giám sát nhiều disk trên zabbix</p>
+					</div>
+				</article>
+			</a>
+		</li>
+	
+</ul>
+	</div>
+
+
+
+
+<div id="subscribe" class="modalDialog">
+	<div>
+		<a title="Close" class="close">×</a>
+		<form action="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/" method="post">
+			<h2>Subscribe</h2>
+			<p>The latest tutorials sent straight to your inbox.</p>
+			<input type="email" name="EMAIL" placeholder="Email">
+			<input type="submit" value="Sign up">
+		</form>
+	</div>
+</div>
+
+<div id="share" class="modalDialog sharing">
+	<div>
+		<a title="Close" class="close">×</a>
+		<h2>Share</h2>
+		<p>Share this tutorial with your community.</p>
+		<ul>
+			<li><a class="twitter" target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fblog.cloud365.vn%2Fshell%2Fbash-shel-danh-cho-nguoi-moi-bat-dau-p1%2F">
+		<svg class="twitter" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"></path></svg>
+	
+ Twitter</a></li>
+			<li><a class="facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.cloud365.vn%2Fshell%2Fbash-shel-danh-cho-nguoi-moi-bat-dau-p1%2F">
+		<svg class="facebook" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="15.8 15.8 25 25"><path d="M32.8 24.7h-3.2v-2.1c0-0.8 0.5-1 0.9-1s2.3 0 2.3 0v-3.5l-3.1 0c-3.5 0-4.3 2.6-4.3 4.3v2.3h-2v3.6h2c0 4.6 0 10.2 0 10.2h4.2c0 0 0-5.6 0-10.2h2.8L32.8 24.7z"></path></svg>
+	
+ Facebook</a></li>
+			<li><a class="google-plus" target="_blank" href="https://plus.google.com/share?url=https%3A%2F%2Fblog.cloud365.vn%2Fshell%2Fbash-shel-danh-cho-nguoi-moi-bat-dau-p1%2F">
+		<svg class="google-plus" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M23,11H21V9H19V11H17V13H19V15H21V13H23M8,11V13.4H12C11.8,14.4 10.8,16.4 8,16.4C5.6,16.4 3.7,14.4 3.7,12C3.7,9.6 5.6,7.6 8,7.6C9.4,7.6 10.3,8.2 10.8,8.7L12.7,6.9C11.5,5.7 9.9,5 8,5C4.1,5 1,8.1 1,12C1,15.9 4.1,19 8,19C12,19 14.7,16.2 14.7,12.2C14.7,11.7 14.7,11.4 14.6,11H8Z"></path></svg>
+	
+ Google+</a></li>
+			<li><a class="hacker-news" target="_blank" href="http://news.ycombinator.com/submitlink?u=https%3A%2F%2Fblog.cloud365.vn%2Fshell%2Fbash-shel-danh-cho-nguoi-moi-bat-dau-p1%2F&amp;t=Bash%20Shell%20d%C3%A0nh%20cho%20ng%C6%B0%E1%BB%9Di%20m%E1%BB%9Bi%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u%20-%20Ch%C6%B0%C6%A1ng%201">
+		<svg class="hacker-news" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18.8 3.3c-0.4 0.8-5.6 11.1-5.6 11.2 0 2 0 6.2 0 6.2 -0.1 0-2.2 0-2.3 0 0 0 0-5.9 0-6.2 0 0-5.5-10.9-5.6-11.1C5.3 3.3 5.3 3.3 5.3 3.3 5.3 3.3 5.3 3.3 5.3 3.3c0 0 0 0 0.1 0 0.9 0 1.7 0 2.6 0 0 0 0 0 0 0.1 0.1 0.1 4 8.3 4.1 8.3 0 0 4.2-8.3 4.3-8.4 0.8 0 1.6 0 2.4 0 0 0 0 0 0 0C18.8 3.3 18.8 3.3 18.8 3.3z"></path></svg>
+	
+ Hacker News</a></li>
+		</ul>
+	</div>
+</div>
+
+<script src="./2_files/main.js.download"></script>
+
+<script>
+	$('.left-menu').each(function(){
+		old_link = $(this).attr('href');
+		new_link = remove_accents(old_link)
+		$(this).attr("href", new_link);
+	});
+
+	$('h2[id]').each(function(){
+   		this.id = remove_accents(this.id)
+	});
+
+
+	var headings = document.querySelectorAll("h2[id]");
+
+	for (var i = 0; i < headings.length; i++) {
+		var anchorLink = document.createElement("a");
+		anchorLink.innerText = "#";
+		anchorLink.href = "#" + remove_accents(headings[i].id);
+		anchorLink.classList.add("header-link");
+
+		headings[i].appendChild(anchorLink);
+	}
+
+	$(".modalOpen").click(function() {
+		var id = $(this).attr("href");
+		$(id).addClass("show");
+
+		$(window).click(function() {
+			$(".show").removeClass("show");
+		});
+
+		$(id + " > div").click(function(event){
+			event.stopPropagation();
+		});
+		return false;
+	});
+
+	$(".close").click(function() {
+		$(".show").removeClass("show");
+		return false;
+	});
+
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) {
+			$(".show").removeClass("show");
+		}
+	});
+</script>
+
+			</div>
+		</section>
+	</div>
+
+	<div class="modal" id="nav-search-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form class="card card-sm" action="https://blog.cloud365.vn/search/" method="get">
+					<div class="card-body row no-gutters align-items-center">
+						<div class="col">
+							<div class="input-group mb-3">
+								<input name="q" class="form-control-lg form-control form-control-borderless" placeholder="Nhập từ khóa tìm kiếm" aria-describedby="basic-addon2">
+								<div class="input-group-append">
+									<button type="submit" class="btn btn-lg btn-success"><i class="fa fa-search"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer>
+	<div class="wrapper">
+		<ul class="footer-links">
+			
+				<li><a target="_blank" href="https://www.facebook.com/nhanhoacom/" class="Facebook-icon">
+					
+						
+		<svg class="facebook" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.56 14.57,4 16.5,4M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z"></path></svg>
+	
+
+					
+					</a></li>
+			
+				<li><a target="_blank" href="https://www.youtube.com/channel/UCB_gZGsKMNdPCkDyu-mEsAQ" class="YouTube-icon">
+					
+						
+		<svg class="youtube" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z"></path></svg>
+	
+
+					
+					</a></li>
+			
+				<li><a href="https://blog.cloud365.vn/feed.xml" class="RSS-icon">
+					
+						
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><circle cx="6.18" cy="17.82" r="2.18"></circle><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"></path></svg>
+		
+
+					
+					</a></li>
+			
+				<li><a target="_blank" href="https://blog.cloud365.vn/shell/bash-shel-danh-cho-nguoi-moi-bat-dau-p1/" class="Email-icon">
+					
+						
+			<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+		
+
+					
+					</a></li>
+			
+		</ul>
+		<p class="copyright">© BlogCloud365 2021. All rights reserved.</p>
+	</div>
+</footer>
+	<script>
+		$(function () {
+			$('a[href*=\\#]').not(".no-smooth").on('click', function (event) {
+				var el = $(this.hash);
+				if (el.length > 0) {
+					// event.preventDefault();
+					$('html,body').animate({ scrollTop: $(this.hash).offset().top - 50 }, 500);
+				}
+			});
+
+			$('svg').click(function () {
+				$(this).parent('form').submit();
+			});
+		});
+
+		document.getElementById("open-nav").addEventListener("click", function (event) {
+			event.preventDefault();
+			document.body.classList.toggle("nav-open");
+		});
+	</script>
+	<script type="text/javascript" src="./2_files/custom.js.download"></script>
+
+
+
+</body></html>
