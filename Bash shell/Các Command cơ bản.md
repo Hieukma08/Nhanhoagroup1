@@ -239,9 +239,9 @@
 
 - Tương tự giữa các ngôn ngữ lập trình , bash cũng có mảng . Một mảng là một tập hợp chứa nhiều giá trị . Không có kích thước giới hạn cho mảng . Magr trong bash chỉ có chỉ số bắt đầu từ 0 . có một vài cách khác nhau để tạo ra biến trong mảng bash:
 
-- >array[0]=val 
-- >array[1]=val
-- >array[2]=val
-- >array=([2]=val [0]=val [1]=val)
-- >array=(val val val)
+  - >array[0]=val 
+  - >array[1]=val
+  - >array[2]=val
+  - >array=([2]=val [0]=val [1]=val)
+  - >array=(val val val)
 
