@@ -245,3 +245,86 @@
   - >array=([2]=val [0]=val [1]=val)
   - >array=(val val val)
 
+- Để hiển thị một giá trị ở chỉ số nhất định ,sử dụng cú pháp sau 
+  - `${array[i]}     # trong đó i là chỉ số mảng`
+- Nếu không chỉ định chỉ số mạng , chỉ số 0 sẽ được ngầm định . Để xem có bao nhiêu phần tử trong bảng , sử dụng cú pháp sau : 
+  - `${#aray[@]}`
+
+- Bash cũng có toán tử 3 ngôi . Xem 1 số vd dưới đây 
+  - ${varname:-word}    # Nếu varname tồn tại và khác null, trả về varname; ngược lại trả về word
+  - ${varname:=word}    # Nếu varname tồn tại và khác null, trả về varname; ngược lại gán giá trị word cho varname và trả về varname
+  - ${varname:+word}    # Nếu varname tồn tại và khác null, trả về word; ngược lại trả về null
+  - ${varname:offset:length}    # substring, trả về substring của varname bắt đầu từ offset và lấy tới length ký tự.
+  ## String trong Bash Shell
+
+  ## Hàm trong Bash Shell
+
+- Như hầu hết các ngôn ngữ lập trình, bạn có thể sử dụng hàm để nhóm các đoạn code vào thành tức chức năng riêng nhằm mục đích cấu trúc và tái sử dụng. Trong Bash, khai báo một hàm nó như thế này `function my_func { my_code }`. Còn việc gọi hàm chỉ đơn giản là viết tên hàm ra thôi.
+ - ex: 
+
+ <img src="/Bash shell/image/1.png">
+
+<img src="/Bash shell/image/2.png">
+
+- Khi bạn chạy command `$ hello` phía trên nó sẽ xuất ra “world!”. Hai hàm `hello` và `say` ở trên là giống nhau, sự khác biệt ở đây chỉ là hàm `say` có sử dụng đối số đầu tiên mà nó nhận được. Các tham số trong hàm làm việc tương tự như tham số trong các command, tập lệnh.
+
+## Cấu trúc điều khiển 
+
+- Cấu trúc điều khiển trong Bash Shell tương tự như các ngôn ngữ lập trình khác . Có nhiều dạng cấu trúc điều khiển nhưng cơ bản nhất là các cấu lện `if` điều kiện `then` khối lệnh và khối lệnh chỉ được thực  thi khi điều kiện là đúng ( true )
+
+- <img src="/Bash shell/image/3.png">
+
+- Đôi khi sử dụng `case statements` sẽ làm code bạn rõ ràng hơn so với sử dụng if
+
+- <img src="/Bash shell/image/4.png">
+
+- VD về các biểu thức điều kiện 
+
+<img src="/Bash shell/image/5.png">
+
+## Vòng lặp trong bash 
+
+- Trong bash có 3 loại vòng lặp chính là `for` , `while` , and `until`
+-Cú pháp `for` khác nhau 
+
+- <img src="/Bash shell/image/6.png">
+
+- Cú pháp `while` 
+
+<img src="/Bash shell/image/7.png">
+
+- Cú pháp `until`
+
+<img src="/Bash shell/image/8.png">
+
+
+## Các mẹo dùng Bash Shell
+
+- Việc học bash Script không thể bỏ qua các mẹo hay ho giúp chúng ta tăng hiệu quả công việc và tăng tốc độ làm việc .
+
+## Tạo alias ( viết tắt)
+
+-Việc này giúp bạn tiết kiệm thời gian bằng cách gõ alias để chạy một command dài nào đó thường xuyên. Ví dụ:
+- Chạy `nano ~/.bash_profile` và thêm dòng dưới đây vào:
+  - `$ alias dockerlogin='ssh www-data@adnan.local -p2222'  # add your alias in .bash_profile`
+- Sau khi sửa bạn cần nhập lại 
+
+<img src="/Bash shell/image/9.png">
+
+- và giờ đây thay vì gõ `ssh www-data@adnan.local -p2222` thì chỉ cần `fox dockerlogin`.
+
+## Di chuyển nhanh chóng 
+
+- chạy `nano ~/.bashrc` và thêm vào dòng dưới đây 
+
+<img src="/Bash shell/image/10.png">
+
+- Bây giờ bạn cần cập nhật lại `bashrc` và việc di chuyển tới 1 đường dẫn dài trở lên rất đơn giản :
+
+<img src="/Bash shell/image/11.png">
+
+## Debug trong Bash Shell
+- Bạn có thể dễ dàng Debug trong khi học bash shell ( bash script ) hoặc làm bằng cách thêm các option vào command 
+- vd : 
+
+<img src="/Bash shell/image/12.png">
