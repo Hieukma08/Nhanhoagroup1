@@ -12,9 +12,10 @@
       -  ex : /bin/bash Hello world
     -Dòng 2 : Sử dụng câu lệnh `echo` để ghi dòng `hello world`
   - thực hiện chạy scrpit `Hello world` thoe 1 trong 3 cách sau .
-    - ./hello-world.sh
-    - bin/bash hello-world.sh
-    - bash hello-worl.sh
+
+    - ` ./hello-world.sh`
+    - `bin/bash hello-world.sh`
+    - `bash hello-worl.sh`
 
 3. Sử dụng các biến trong Linux
 
@@ -26,10 +27,14 @@
 
   - `#!/usr/bin/env bash`
   - `who_variable` = "word"
-  - `print"Hello, %\n" "$s\n" "$who_variable"
+  - `print"Hello, %\n" "$s\n" "$who_variable"`
+
 - Phân tích từng dòng của script sẽ như sau : 
+
   - Dòng 1 : `#!/usr/bin/env bash` : cú pháp shebang chỉ ra những chương trình cần thực hiện với `Bash shell`
+
   - dòng 2 : Gán biến `who_variable` có nội dung là `world`
+
   - Dòng 3 : 
     - printf : câu lệnh in 
     - %s : format chỉ ra rằng biến phía sau phải có sang string 
@@ -37,15 +42,19 @@
     - $who_variable : biến được khai báo ở dòng trên 
   4. Truyền tham số vào biến với User Input
   - các biến có thể được truyền vào trực tiếp từ người dùng sau :
-    - #!/usr/bin/env bash
-    - echo "Xin chao, ban ten la gi?"
-    - read name
-    - echo "Xin chao, $name."
+
+    - `#!/usr/bin/env bash`
+    - `echo "Xin chao, ban ten la gi?"`
+    - `read name`
+    - `echo "Xin chao, $name."`
+
   - Khi script chạy tới dòng thứ 2 , câu lệnh `read` sec được đọc dữ liệu truyền từ người dùng , sau đó gán dữ liệu đó vào biến `name`.
   - kết quả như sau : 
-    - Xin chao, ban ten la gi?
-    - Manh
-    - Xin chao, Manh.
+
+    - `Xin chao, ban ten la gi?`
+    - `Manh`
+    - `Xin chao, Manh.`
+    
   5. Tầm quan trọng của các dấu nháy với String 
     - Việc sử dụng dấu nháy rất quan trọng trong việc thể hiện string trong bash 
     - Có hai dạng dấu nháy :  
