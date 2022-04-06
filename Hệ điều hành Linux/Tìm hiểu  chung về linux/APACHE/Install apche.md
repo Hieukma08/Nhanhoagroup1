@@ -48,3 +48,7 @@
     ErrorLog /var/www/example.com/log/error.log
     CustomLog /var/www/example.com/log/requests.log combined
 </VirtualHost> 
+
+## Kết quả 
+
+<img src="/Hệ điều hành Linux/Tìm hiểu  chung về linux/APACHE/image/1.jpg">
