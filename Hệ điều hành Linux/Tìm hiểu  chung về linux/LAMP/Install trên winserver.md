@@ -20,7 +20,12 @@
 
 <img src="/Hệ điều hành Linux/Tìm hiểu  chung về linux/LAMP/IIS/4.png">
 
-- Dowload PHP theo link: https://windows.php.net/download/
-- Dowload Wincache theo link: https://sourceforge.net/projects/wincache/files/
-- Giải nén PHP vừa tạo vào đường dẫn : C:\PHP\
-- Giải nén Wincache vào đường dẫn C:\PHP\ext\
+
+## . Dựng web php
+
+1.  Dowload PHP theo link: https://windows.php.net/download/
+2.  Dowload Wincache theo link: https://sourceforge.net/projects/wincache/files/
+3.  Giải nén PHP vừa tạo vào đường dẫn : C:\PHP\
+4.  Giải nén Wincache vào đường dẫn C:\PHP\ext\
+5. Vào Control Panel , Chọn System Security rồi click tiếp Advanced System setting 
+7. Ở System properties , chọn tab Advance , chọn Environmant Variables
