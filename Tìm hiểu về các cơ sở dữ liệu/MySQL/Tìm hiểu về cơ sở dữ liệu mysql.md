@@ -34,3 +34,42 @@
 - Câu lệnh tính tổng : SQL SUM 
 - Câu lệnh tính trung bình trên cột : AVG
 - Câu lệnh tìm giá trị nhỏ nhất, lớn nhất  : MIn , MAX
+
+
+## Cách cài đặt cơ sở dữ liệu mysql trên hệ điều hành Linux ( Centos 7 )
+ 1. Bước 1 : 
+ **Thực hiện tải các bản yum mới nhất từ trên mạng về phục vụ cho việc cài sql**
+ - `yum update `: 
+ 
+ <img src="/Tìm hiểu về các cơ sở dữ liệu/MySQL/image/1.png">
+
+**Tải yum sql từ trên mạng về máy tính**
+
+- `wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm`
+
+<img src="/Tìm hiểu về các cơ sở dữ liệu/MySQL/image/2.png">
+
+**Tiếp tục tiến hành cài đặt mysql server**
+
+- `yum install mysql-server`
+
+- Hiển thị như sau là thành công 
+
+<img src="/Tìm hiểu về các cơ sở dữ liệu/MySQL/image/3.png">
+
+- **Sau khi ta cài đặt cho root xong muốn truy cập từ xa thì ta cần mở port 3306 trong bảng iptable 
+  - `iptables -I INPUT -p tcp -m tcp --dport 3306 -j ACCEPT`
+- Sau khi cài đặt xong mysql ta cần tạo ra user để có thể đăng nhập được mysql . Để tạo được user thì ra có thể thêm vào cuối mỗi câu lệnh cần có dấu `;` hoặc `/g`
+  - create user 'user-name'@'IP' identified by 'password';
+- Trong đó 
+  - username : Tên của user ;
+  - Ip : Máy có thể truy cập user này muốn tất cả các user đều đăng nhập được ta đều đăng nhập được ta để `%`;
+  - password : Mật khẩu đăng nhập
+
+- Để kiểm tra phiên bản sql đã cài ta dùng lệnh `SELECT version`
+
+<img src="/Tìm hiểu về các cơ sở dữ liệu/MySQL/image/4.png">
+
+- Đăng nhập vào database bằng user : 
+
+<img src="/Tìm hiểu về các cơ sở dữ liệu/MySQL/image/5.png">

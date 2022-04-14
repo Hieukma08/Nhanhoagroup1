@@ -11,6 +11,7 @@
 - Một cái ví dụ về A record:
 
     <img src="image/1.PNG">
+    
 - Ký tự @ tượng trưng cho bản ghi tên miền gốc và giá trị TTL =14400, tương đương với 14400s=4h, điều này có nghĩa là nếu 1 A record được cập nhật, thì phải mất 4h nó mới có hiệu lực.
 - Đại đa số các trang web chỉ có một A record. Nhưng cũng có những trang web lớn sẽ có 1 vài bản ghi A record khác nhau phục vụ cho cân bằng tải Round Robin - để phân phối lưu lượng truy cập đến một số địa chỉ IP, mỗi IP đều lưu trữ nội dung giống hệt nhau.
 
