@@ -1,9 +1,9 @@
 # Hệ cơ sở dữ liệu MSSQL 
 ## Tổng quan 
 
-1. What is the microsoft SQL ?
+1. What is the microsoft SQL (MSSQL) ?
 
-- Microsoft SQL server í a relational database management system that support a wide variety of transaction processing , business intelligence and anlytics application in corporate IT enviromants . Microsoft SQL Server is one of the three market-leading database technologies , along with Oracle Database and IBM's (DB2)
+- Microsoft SQL server is a relational database management system that support a wide variety of transaction processing , business intelligence and anlytics application in corporate IT enviromants . Microsoft SQL Server is one of the three market-leading database technologies , along with Oracle Database and IBM's (DB2)
 - Inside SQL Server's architecture -- How SQL Server works
   - Like other RDBMS technologies , SQL Server is primarily built around a row-based table structure that connects related data elemants in different tables , The relational madel also provides refertial integrity and other integrity constraints to maintain data accuracy , isolation and durabillity, coolectively known as the ACID properties , and are designed to guuaratee
 
