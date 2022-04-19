@@ -1,3 +1,5 @@
 # Cài đặt MSSQL trên winserver 12
 
-- Để cài đặt MSSQL server , bạn truy cập vào trang chủ của microsoft để Dowload SQL server bản chính thống và an toàn và chọn bản Express 
+- Để cài đặt mssql trên winserver chúng ta cần thực hiện các bước sau đây : 
+  - B1: Cài đặt SQL manager studio 2012
+  - B2 : cài đặt sql 
