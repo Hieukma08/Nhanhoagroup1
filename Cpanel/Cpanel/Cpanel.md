@@ -23,5 +23,6 @@ Các tính năng cơ bản nhất của cPanel gồm:
  ![a](https://f5-zpcloud.zdn.vn/2523748414366497090/b1af73d0b7f47daa24e5.jpg)
 
  2. **Cài đặt WordPress với cPanel**
+ 
 
  
