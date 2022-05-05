@@ -71,3 +71,12 @@ systemctl restart vsftpd
 firewall-cmd --permanent --add-port=30000-31000/tcp
 firewall-cmd --reload
 ```
+
+# Truy cập FTP server 
+- Tạo user vsfer 
+```
+adduser vsfer
+```
+- sau khi tạo user thì thư mục mặc định của tài khoản này sẽ ở /home/vsfer
+- Cấp quyền truy cập đến FTP server
+  - tạo file 
