@@ -4,3 +4,4 @@
 - Cần làm được việc này thì sẽ phải có hai máy chạy hệ điều hành linux 
   - Một máy đóng vai trò là server 
   - Một máy đóng vai trò là client 
+
