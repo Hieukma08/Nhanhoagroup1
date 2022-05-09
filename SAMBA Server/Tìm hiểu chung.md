@@ -1,0 +1,2 @@
+Samba server là gì ?
+- Samba server là một ứng dụng ổn định cho phép chia sẻ tệp tin và dịc vụ in qua mạng internet . Phần mềm được cài đặt trên máy chủ trung tâm và từ đố có thể truy cập cả hệ thống Linux và windowns
