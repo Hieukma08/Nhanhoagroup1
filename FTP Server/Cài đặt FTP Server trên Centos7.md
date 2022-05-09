@@ -79,4 +79,14 @@ adduser vsfer
 ```
 - sau khi tạo user thì thư mục mặc định của tài khoản này sẽ ở /home/vsfer
 - Cấp quyền truy cập đến FTP server
-  - tạo file 
+  - tạo file `chroot_list` trong `/etc/vsftpd`
+  - Thêm các user có sẵn vào trong file `chroot_list`
+- Chỉ định thư mục home khi người dùng đăng nhập vào hệ thống 
+  - Tạo thư mục `user_conf`
+  - Chỉ định thư mục hoome cho user `vsfer` và thêm vào các dòng lệnh ứng với mỗi file
+  ```
+  local_roor=/var/www/vsfer
+  ```
+  - sau đó restart lại dịch vụ vsftp
+  
+    
