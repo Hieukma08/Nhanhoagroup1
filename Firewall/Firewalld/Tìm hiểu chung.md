@@ -62,23 +62,31 @@
 - Đây chính là điểm khác biệt của firewallD với iptable - quản lí thông qua các service . Việc  thiết lập tường lửa đã trở lênh dễ dàng hơn bao giờ hết - chỉ cần thêm các service vào zone đang sử dụng 
 - Đầu tiền , xác định các service trên hệ thống 
   - firewall-cmd --get-services
+
 - Thông thường cần cho phép các services sau : ssh(22/tcp) ,http(80/tcp),https(443/tcp), smtp(925/tcp),smtp-submission(587/tcp)
+
 - Thiết lập cho phép service trên firewalld sử dụng --add-service
   - firewall-cmd --zone=public --add-service=http
   - firewall --zone=public --add-service=http --pẻmanent
+
 - Ngay lập tức ,zone "public " cho phép kết nối với HTTP trên cổng 80 . Kiểm tra lại 
   - firewall-cmd --zone=public --list-service 
+
 - vô hiệu hóa services trên firewalld , sử dụng -remove-service
   - firewall-cmd --zone=public --remove-service=http
   - firewall-cmd --zone=public --remove-service=http --permanent 
+
 # Thiết lập cho port 
 - Mở port với tham số --add-port
   - firewall-cmd --zone=public --add-port=80/tcp
   - firewall-cmd --zone=public --add-port=443/tcp
+
 - Mở 1 dải port : 
   - firewall-cmd --zone=public --add-port=4990-5000/tcp --permanent 
+
 - Kiểm tra lại : 
   - firewall-cmd --zone=public --list-port
+  
 - Đóng port với tham số -remove-port
   - firewall-cmd --zone=public --remove-port=999/tcp
   - firewall-cmd --zone=public --remove-port=999/tcp --permanent

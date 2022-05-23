@@ -1,0 +1,29 @@
+# Báo cáo tổng hợp kiến thức đã tìm hiểu 
+- Làm quen và tìm hiểu công cụ GitHub
+- Kiến thức về Network : 
+  - Tìm hiểu về NAT 
+  - Tìm hiểu về các giao thức HTTP,DNS ,HTTPS,FTP....
+  - Tìm hiểu về các công cụ Cisco , GNS3
+  - Tìm hiểu về VLAN 
+- Tìm hiểu về hệ điều hành Linux
+  - Tìm hiểu tổng quát về hệ điều hành Linux
+  - Tìm hiểu về Apache
+  - Tìm hiểu về Nginx 
+- Tìm hiểu về DNS và Domain
+  - DNS record 
+  - Tên miền 
+- Tìm hiểu về Cpanel
+- Tìm hiểu về Mailserver
+  - Zimbra MailServer
+  - Kerio MailServer
+- Tìm hiểu về Firewall
+  - APF
+  - CSF
+  - Frirewalld
+  - Iptable
+  - UFW
+- Tìm hiểu về FileServer
+  - FTP
+  - Samba
+- Tìm hiểu về Direcadmin
+  - 
