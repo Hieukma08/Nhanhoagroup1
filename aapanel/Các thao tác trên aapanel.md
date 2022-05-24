@@ -31,3 +31,18 @@
   - <img src="/aapanel/image/5.png">
 
 
+- File : 
+  - Phần file chúng ta chứa các file như upload từ máy lên hay các file backup từ server về 
+
+  - <img src="/aapanel/image/14.png">
+
+- Cron : 
+  - Thiết lập lịch để có thể thực hiện các chức năng như backup , restore, kiểm tra dung lượng ram ....
+  - <img src="/aapanel/image/19.png">
+- AppStore : 
+  - Có thể buy các phần mềm bảo vệ hay 1 số phần mềm khác tại đây do nhà cũng cấp giới thiệu .
+  - <img src="/aapanel/image/18.png">
+
+- Setting : 
+ - Cài đặt aapanel : 
+ - <img src="/aapanel/image/17.png">
