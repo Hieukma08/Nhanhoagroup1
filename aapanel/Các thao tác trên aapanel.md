@@ -1,3 +1,22 @@
 # các mục có sẵn trên  apanel
 - Home : 
   - <img src="/aapanel/image/3.png">
+
+  - Tại đây hiển thị các thông số như bộ nhớ RAm , thông số CPU, Số site , số FTP , số DB , hay các phiên bản phần mềm đang chạy hoặc các phần mềm được gợi ý có thể mua 
+
+- Tiếp theo là Website : 
+  - Tại phần website : Chúng ta có các mục như PHP project hay Node Project
+  - Trong mỗi phần lại có các mục nhỏ như add site . default page , default website , php CLI version , category manager
+  - Quan trọng nhất là phần add site hay Domain 
+
+  - <img src="/aapanel/image/4.png">
+
+  - Tại phần site kích chọn tên site đã thiết lập chúng ta có thể thiết lập đường dẫn đến file cài đặt của website
+
+  - <img src="/aapanel/image/10.png">
+
+  
+- Phần kế tiếp là phần FTP : Tại đây chúng ta có thể thiết lập các ftp user , user này có thể quản lí tài liệu của các user khác
+
+  - <img src="/aapanel/image/11.png">
+
