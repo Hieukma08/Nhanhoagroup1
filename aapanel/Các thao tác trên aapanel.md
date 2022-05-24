@@ -20,3 +20,14 @@
 
   - <img src="/aapanel/image/11.png">
 
+  - Có thể dùng Filezilla để ssh vào tài khoản root hoặc user1 và user2 qua ftp 
+
+  - <img src="/aapanel/image/12.png">
+
+
+- Tiếp theo là phần Database : 
+  - Tại đây chúng ta có thể tạo Database , thiết lập root pw, đăng nhập vào tài khoản phpMyadmin , Đồng bộ tất cả dữ liệu .
+
+  - <img src="/aapanel/image/5.png">
+
+
