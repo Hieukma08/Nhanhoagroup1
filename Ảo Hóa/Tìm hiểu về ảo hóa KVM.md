@@ -36,29 +36,29 @@
 4. Các chế độ mạng trong KVM
 -  Trong KVM có 3 chế độ card mạng là NAT (routing with iptables), Public Bridge và Private Bridge.\
 
-4.1 Private Bridge
+- Private Bridge
 
-Trường hợp sử dụng: Để tạo một mạng nội bộ giữa 2 hay nhiều máy ảo. Mạng này sẽ không thấy được từ các máy ảo khác cũng như mạng bên ngoài.
+  - Trường hợp sử dụng: Để tạo một mạng nội bộ giữa 2 hay nhiều máy ảo. Mạng này sẽ không thấy được từ các máy ảo khác cũng như mạng bên ngoài.
 
-4.2. Public Bridge
+-  Public Bridge
 
-Trường hợp sử dụng: Gán bridge với một card mạng để giúp các máy ảo kết nối với public bridge có thể giao tiếp trực tiếp với mạng như một thiết bị trong mạng.
+  - Trường hợp sử dụng: Gán bridge với một card mạng để giúp các máy ảo kết nối với public bridge có thể giao tiếp trực tiếp với mạng như một thiết bị trong mạng.
 
-4.3. NAT (routing with iptables)
+- NAT (routing with iptables)
 
-Đây là chế độ mạng mặc định của KVM. Các máy ảo được cấp phát ip và sẽ được định tuyến để có thể ra được mạng ngoài bằng iptables.
+  - Đây là chế độ mạng mặc định của KVM. Các máy ảo được cấp phát ip và sẽ được định tuyến để có thể ra được mạng ngoài bằng iptables.
 
 5. Các file cấu hình của KVM
-Thư mục chưa máy ảo
+- Thư mục chưa máy ảo
 
-Thông tin cấu hình của máy ảo nằm ở thư mục /etc/libvirt/qemu/. Trong thư mục này sẽ chứa tất cả các file cấu hình của từng máy ảo hiện có trong KVM dưới dạng file xml. Chúng ta có thể chỉnh sửa thông tin của máy ảo trực tiếp từ file này hoặc bằng lệnh virsh edit <tên máy ảo>
+- Thông tin cấu hình của máy ảo nằm ở thư mục /etc/libvirt/qemu/. Trong thư mục này sẽ chứa tất cả các file cấu hình của từng máy ảo hiện có trong KVM dưới dạng file xml. Chúng ta có thể chỉnh sửa thông tin của máy ảo trực tiếp từ file này hoặc bằng lệnh virsh edit <tên máy ảo>
 
-Thư mục chứ các file storage của máy ảo như image thường sẽ được để ở /var/lib/libvirt/image
+- Thư mục chứ các file storage của máy ảo như image thường sẽ được để ở /var/lib/libvirt/image
 
-File log của KVM
+- File log của KVM
 
-Các file log của KVM nằm trong /var/log/libvirt/
+- Các file log của KVM nằm trong /var/log/libvirt/
 
-Log ghi lại hoạt động của từng máy ảo nằm trong thư mục /var/log/libvirt/qemu/. Khi một máy ảo được tạo thì sẽ tự động tạo một file log cho máy ảo đó và được lưu trong thư mục này
+- Log ghi lại hoạt động của từng máy ảo nằm trong thư mục /var/log/libvirt/qemu/. Khi một máy ảo được tạo thì sẽ tự động tạo một file log cho máy ảo đó và được lưu trong thư mục này
 
-Thư mục chứa image /var/lib/libvirt/image
+- Thư mục chứa image /var/lib/libvirt/image
