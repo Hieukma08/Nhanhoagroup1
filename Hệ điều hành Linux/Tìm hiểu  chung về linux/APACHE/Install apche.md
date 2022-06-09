@@ -41,6 +41,8 @@
 `IncludeOptional sites-enable/*.conf`
 - Tạo file mới trong directory 
 `vi /etc/httpd/sites-available/hieutn.com.conf` và thêm dữ liệu vào file : 
+
+```
 <VirtualHost *:80>
     ServerName www.example.com
     ServerAlias example.com
@@ -48,6 +50,7 @@
     ErrorLog /var/www/example.com/log/error.log
     CustomLog /var/www/example.com/log/requests.log combined
 </VirtualHost> 
+```
 
 ## Kết quả 
 
