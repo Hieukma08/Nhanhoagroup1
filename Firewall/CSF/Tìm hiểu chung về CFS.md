@@ -44,7 +44,7 @@ tar -f csf.tgz
   `csf -dr 192.168.142.100`
 - Một số lệnh khác : 
   - csf -a IP //allow địa chỉ ip
-  - csf -ả IP // Xóa địa chỉ ip đã allow 
+  - csf -ar IP // Xóa địa chỉ ip đã allow 
   - csf -g IP // kiểm tra địa chỉ Ip có bioj block hay ko 
   - csf -t // Hiển thị danh sách ip từ chối và cho phép TTL and comments
   - csf -r //Khởi động lại CSF
