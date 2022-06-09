@@ -1,0 +1,11 @@
+# Tổng quan .
+- KVM đưucọ biết đến là một cơ sở hạ tầng ảo hóa cho nhân Linux dành cho những CPU hỗ trợ công nghệ ảo hóa . 
+- Chuẩn bị : Một máy chạy hệ điều hành CEntos 7 với cấu hình tối thiểu 2 CPU , 2GB RAM và 10GB disk . 
+- 1 file iso của hệ điều hành khác để cài máy ảo . 
+- Để cài được KVM thì cần phải được CPU hỗ trợ . Để kiểm tra CPU có hỗ trợ hay không ta dùng lệnh : 
+``lscpu | grep Vỉtualization``
+``egrep -c "svm\vmx" /proc/cpuinfo ``// nếu kết quả trả về khác 0 thì CPU được hỗ trợ . 
+
+- <img src="/Ảo Hóa/image/2.jpg">
+
+- Không được CPU hỗ trợ . s
