@@ -10,3 +10,10 @@ cd /usr/loacl/direcadmin/custombuild/option.conf
 <img src ="/DirectAdmin/build Nginx + php/1.png">
 
 <img src ="/DirectAdmin/build Nginx + php/1.png">
+
+- Sau đó chạy các lệnh sau : 
+  - `build update`
+  - `build nginx`
+  - `build php n `
+  - `build rewrite_confs`
+  
