@@ -31,3 +31,24 @@ tar -f csf.tgz
   ```
   nano /etc/csf/csf.conf
   ```
+# Khởi động CSF 
+- Chạy CSF và cho phép kích hoạt mỗi khi bôt VPS 
+- chkconfig --level 235 csf on 
+- service csf restart 
+------------------------------------------------------------
+
+- Một số lệnh csf thường dùng 
+  - Chặn Ip : 
+  ` csf -d 192.168.142.100`
+  - Xóa ip đã block : 
+  `csf -dr 192.168.142.100`
+- Một số lệnh khác : 
+  - csf -a IP //allow địa chỉ ip
+  - csf -ả IP // Xóa địa chỉ ip đã allow 
+  - csf -g IP // kiểm tra địa chỉ Ip có bioj block hay ko 
+  - csf -t // Hiển thị danh sách ip từ chối và cho phép TTL and comments
+  - csf -r //Khởi động lại CSF
+  - csf -x //Tắt CSF 
+  - csf -e // Mở CSF 
+  ## Gỡ bỏ CSF 
+  - /etc/csf/uninstall.sh
